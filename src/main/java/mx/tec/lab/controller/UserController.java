@@ -21,8 +21,8 @@ import mx.tec.lab.service.UserService;
 import mx.tec.lab.util.JsonWebTokenUtil;
 
 @RestController
-@CrossOrigin
 @RequestMapping("/api/user-management/*")
+@CrossOrigin(origins = "http://localhost:3000")
 public class UserController {
 	@Autowired
 	private AuthenticationManager authenticationManager;

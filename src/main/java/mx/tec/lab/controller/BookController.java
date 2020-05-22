@@ -3,6 +3,7 @@ package mx.tec.lab.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -14,6 +15,7 @@ import mx.tec.lab.service.BookService;
 
 @RestController
 @RequestMapping("/api/book-management/*")
+@CrossOrigin(origins = "http://localhost:3000")
 public class BookController {
 	@Autowired
 	private BookService bookService;
